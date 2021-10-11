@@ -10,4 +10,10 @@ class MessagesViewModel : ViewModel() {
         value = "This is messages Fragment"
     }
     val text: LiveData<String> = _text
+
+    private var textMessages: String = "";
+
+    fun getTextMessage(): String{
+        return textMessages
+    }
 }

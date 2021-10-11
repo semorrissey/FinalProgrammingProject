@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -12,6 +14,10 @@ import com.example.finalprogrammingproject.R
 import com.example.finalprogrammingproject.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
+
+    private lateinit var profileImage: ImageView
+    private lateinit var xButton: ImageButton
+    private lateinit var checkButton: ImageButton
 
     private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
