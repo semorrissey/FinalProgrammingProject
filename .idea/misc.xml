@@ -26,7 +26,7 @@
         <entry key="app/src/main/res/layout/fragment_messages.xml" value="0.21195652173913043" />
         <entry key="app/src/main/res/layout/fragment_notifications.xml" value="0.1393110435663627" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.21195652173913043" />
-        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.21195652173913043" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_messages.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.28205128205128205" />
       </map>
