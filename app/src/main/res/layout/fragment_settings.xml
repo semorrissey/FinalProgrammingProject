@@ -4,76 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.notifications.SettingsFragment">
-
-    <Button
-        android:id="@+id/helpButton"
-        android:layout_width="369dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="173dp"
-        android:background="@android:color/red"
-        android:text="Help"
-        app:iconTint="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/blockedButton"
-        android:layout_width="369dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="28dp"
-        android:background="@android:color/red"
-        android:text="Blocked Accounts"
-        app:iconTint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/accountButton" />
+    android:orientation="vertical"
+    tools:context=".ui.notifications.SettingsFragment"
+    android:id="@+id/linearLayout3">
 
     <TextView
         android:id="@+id/settingsTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="293dp"
+        android:layout_width="172dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="233dp"
         android:text="Settings"
-        android:textSize="30sp"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/filterButton"
-        android:layout_width="369dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="28dp"
-        android:background="@android:color/red"
-        android:text="Match Filter"
-        app:iconTint="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/settingsTitle" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_conversion_absoluteHeight="40dp"
+        tools:layout_conversion_absoluteWidth="110dp" />
 
     <Button
         android:id="@+id/accountButton"
-        android:layout_width="369dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginEnd="115dp"
         android:background="@android:color/red"
         android:text="Account Handler"
-        app:iconTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsTitle"
+        tools:ignore="MissingConstraints"
+        tools:layout_conversion_absoluteHeight="67dp"
+        tools:layout_conversion_absoluteWidth="369dp" />
+
+    <Button
+        android:id="@+id/filterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="68dp"
+        android:background="@android:color/red"
+        android:text="Match Filter"
         app:layout_constraintBottom_toTopOf="@+id/blockedButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/filterButton" />
+        app:layout_constraintTop_toBottomOf="@+id/accountButton"
+        tools:ignore="MissingConstraints"
+        tools:layout_conversion_absoluteHeight="67dp"
+        tools:layout_conversion_absoluteWidth="369dp" />
+
+    <Button
+        android:id="@+id/blockedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/red"
+        android:text="Blocked Accounts"
+        tools:ignore="MissingConstraints"
+        tools:layout_conversion_absoluteHeight="67dp"
+        tools:layout_conversion_absoluteWidth="369dp"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="401dp" />
+
+    <Button
+        android:id="@+id/helpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="197dp"
+        android:background="@android:color/red"
+        android:text="Help"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blockedButton"
+        tools:ignore="MissingConstraints"
+        tools:layout_conversion_absoluteHeight="67dp"
+        tools:layout_conversion_absoluteWidth="369dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

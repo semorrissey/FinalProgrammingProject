@@ -10,6 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProgrammingProject">
         <activity
+            android:name=".ui.PopupBlockedActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".ui.PopupAccountActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".ui.PopupFilterActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".ui.PopupHelpActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name">

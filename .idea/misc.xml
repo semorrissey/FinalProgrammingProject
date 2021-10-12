@@ -7,7 +7,10 @@
         <entry key="app/src/main/res/layout-small/account_popup.xml" value="0.18" />
         <entry key="app/src/main/res/layout-small/help_popup.xml" value="0.22" />
         <entry key="app/src/main/res/layout-small/home_popup.xml" value="0.1515625" />
+        <entry key="app/src/main/res/layout/account_item.xml" value="0.21195652173913043" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2640449438202247" />
+        <entry key="app/src/main/res/layout/blocked_item.xml" value="0.2864583333333333" />
+        <entry key="app/src/main/res/layout/blocked_popup.xml" value="0.21195652173913043" />
         <entry key="app/src/main/res/layout/filter_popup.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1393110435663627" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
