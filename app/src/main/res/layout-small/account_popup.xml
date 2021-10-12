@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E61212"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:id="@+id/pauseButton"
+        android:layout_width="162dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="111dp"
+        android:text="Pause Account"
+        android:textColor="#E6DEDE"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="241dp"
+        android:layout_height="215dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/deleteButton"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/handlerTitle"
+        app:srcCompat="@drawable/deleteicon" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="265dp"
+        android:layout_height="209dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/pauseButton"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/handlerTitle"
+        app:srcCompat="@drawable/pause" />
+
+    <TextView
+        android:id="@+id/deleteButton"
+        android:layout_width="162dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="173dp"
+        android:text="Delete Account"
+        android:textColor="#E6DEDE"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/pauseButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+
+    <TextView
+        android:id="@+id/handlerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="236dp"
+        android:text="Account Handler"
+        android:textColor="#F3EDED"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
