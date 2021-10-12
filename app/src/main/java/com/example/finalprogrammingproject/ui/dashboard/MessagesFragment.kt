@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.finalprogrammingproject.R
 import com.example.finalprogrammingproject.databinding.FragmentMessagesBinding
 
+
 class MessagesFragment : Fragment() {
 
     private lateinit var messagesRecyclerView: RecyclerView
