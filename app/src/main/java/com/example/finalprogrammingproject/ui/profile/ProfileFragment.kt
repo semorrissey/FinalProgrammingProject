@@ -75,6 +75,7 @@ class ProfileFragment : Fragment() {
     private lateinit var photoUri: Uri
     private lateinit var textGender: EditText
     private lateinit var textAge:EditText
+    private lateinit var profQR: ImageView
 
 
     private lateinit var dashboardViewModel:ProfileViewModel
@@ -107,6 +108,7 @@ class ProfileFragment : Fragment() {
         text_profile = binding.profileAccountName
         textGender = binding.textGender
         textAge = binding.textAge
+        profQR = binding.profileQR
 
 /**
         profilePicture = binding.profilePicture
@@ -171,67 +173,36 @@ class ProfileFragment : Fragment() {
 
             age = document.get("Age").toString()
             textAge.setText(age)
+
+            //code for working with qr code creater
+            qrCodeIV = profQR
+
+            val manager = activity?.getSystemService(WINDOW_SERVICE) as WindowManager
+            val display = manager.defaultDisplay
+            val point = Point()
+            display.getSize(point)
+
+            val width = point.x
+            val height = point.y
+
+            var dimen = if (width < height) width else height
+            dimen = dimen * 3 / 4
+
+            qrgEncoder =
+                QRGEncoder(textName.text.toString(), null, QRGContents.Type.TEXT, dimen)
+            try {
+
+                bitmap = qrgEncoder!!.encodeAsBitmap()
+                qrCodeIV!!.setImageBitmap(bitmap)
+            } catch (e: WriterException) {
+                Log.e("Tag", e.toString())
+            }
         }
 
-         /** //code for working with qr code creater
-        // initializing all variables.
-        qrCodeIV = view?.findViewById(R.id.idIVQrcode)
-        dataEdt = view?.findViewById(R.id.idEdt)
-        generateQrBtn = view?.findViewById(R.id.idBtnGenerateQR)
 
-        // initializing onclick listener for button.
-        generateQrBtn!!.setOnClickListener {
-            if (TextUtils.isEmpty(dataEdt!!.text.toString())) {
-
-                // if the edittext inputs are empty then execute
-                // this method showing a toast message.
-                Toast.makeText(
-                    context,
-                    "Enter some text to generate QR Code",
-                    Toast.LENGTH_SHORT
-                )
-                    .show()
-            } else {
-                // below line is for getting
-                // the windowmanager service.
-                val manager =
-                    activity?.getSystemService(WINDOW_SERVICE) as WindowManager
-
-                // initializing a variable for default display.
-                val display = manager.defaultDisplay
-
-                // creating a variable for point which
-                // is to be displayed in QR Code.
-                val point = Point()
-                display.getSize(point)
-
-                // getting width and
-                // height of a point
-                val width = point.x
-                val height = point.y
-
-                // generating dimension from width and height.
-                var dimen = if (width < height) width else height
-                dimen = dimen * 3 / 4
-
-                // setting this dimensions inside our qr code
-                // encoder to generate our qr code.
-                qrgEncoder =
-                    QRGEncoder(dataEdt!!.text.toString(), null, QRGContents.Type.TEXT, dimen)
-                try {
-                    // getting our qrcode in the form of bitmap.
-                    bitmap = qrgEncoder!!.encodeAsBitmap()
-                    // the bitmap is set inside our image
-                    // view using .setimagebitmap method.
-                    qrCodeIV!!.setImageBitmap(bitmap)
-                } catch (e: WriterException) {
-                    // this method is called for
-                    // exception handling.
-                    Log.e("Tag", e.toString())
-                }
-            }
-        }**/
     }
+
+
 
 
 
